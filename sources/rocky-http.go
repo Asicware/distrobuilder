@@ -89,7 +89,7 @@ REPO_URL="%s"
 touch /etc/mtab /etc/fstab
 yum_args=""
 mkdir -p /etc/yum.repos.d
-if [ -d /mnt/cdrom ]; then
+if [ -d /mnt/cdrom-never ]; then
 	# Install initial package set
 	cd /mnt/cdrom/Packages
 	rpm -ivh --nodeps $(ls yum-*.rpm | head -n1)
